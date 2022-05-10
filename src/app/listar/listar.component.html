@@ -1,0 +1,21 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Preço</td>
+                <td>Descrição</td>
+                <td>Título</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of listaProdutos">
+                <td>{{p.price}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.title}}</td>
+                <div><button routerLink="/editar/{{p._id}}">Editar</button></div>
+                <div><button routerLink="/excluir/{{p._id}}">Excluir</button></div>
+            </tr>
+            <div><button routerLink="/cadastrar">Cadastrar novo produto</button></div>
+        </tbody>
+    </table>
+</div>
